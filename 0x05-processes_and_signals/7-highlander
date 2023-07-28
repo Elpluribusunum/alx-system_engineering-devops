@@ -3,9 +3,10 @@
 # a two-hour nap between each iteration.
 # exhibits "I am invincible!!!" between each iteration.
 
-while true
+
+trap 'echo "I am invincible!!!"' 15
+while true;
 do
-	echo "To infinity and beyond"
-	sleep 2
-	trap 'echo "I am invincible"' SIGTERM 
+    echo "to infinity and beyond"
+    sleep 2
 done
