@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#This script examine the log file and print the IP adr and the status of HTTP
+
+awk -F' ' '{ print $1, $9 }' apache-access.log | sort | uniq -c | sort -rn
