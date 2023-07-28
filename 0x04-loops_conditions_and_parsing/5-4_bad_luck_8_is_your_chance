@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# This script prints "Hello" at 9 times while displaying "Best School" 10 time
+
+i=0
+
+while ((i < 10))
+do
+	((i++))
+	if [ $i -eq 4 ]
+	then
+		echo "bad luck"
+	elif [ $i -eq 8 ]
+	then
+		echo "good luck"
+	else
+		echo "Best School"
+	fi
+done
