@@ -2,8 +2,4 @@
 # "To infinity and beyond" is permanently displayed.
 # between each iteration there is a "sleep 2".
 
-while true
-do
-  echo "To infinity and beyond"
-  sleep 2
-done
+pgrep -l bash
