@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+#writes "l am alive" endlessly to the file /tmp/my_process
+#pauses every message for two seconds.
+
+while true
+do
+	echo "l am alive!" >> /tmp/my_process
+	sleep 2
+done
