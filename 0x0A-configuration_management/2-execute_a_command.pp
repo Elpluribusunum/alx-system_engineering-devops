@@ -1,5 +1,5 @@
-exec { killmenow':
-	command   =>  '/usr/bin/pkill killmenow',
-	provider  =>  'shell',
-	returns   =>  [0, 1],
+#This code kills process && works together eith the killmenow file which has been provided
+exec { 'pkill':
+  command  => 'pkill killmenow',
+  provider => 'shell',
 }
