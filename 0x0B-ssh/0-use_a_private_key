@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# join my school's server using ssh
+
+ssh -i ~/.ssh/school ubuntu@100.26.154.150
