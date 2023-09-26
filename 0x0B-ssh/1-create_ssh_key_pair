@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# New 4096-byte RSA key pairs should be created
+
+ssh-keygen -t rsa -b 4096 -P betty -f school
