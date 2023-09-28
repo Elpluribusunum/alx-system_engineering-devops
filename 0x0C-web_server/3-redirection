@@ -6,7 +6,7 @@ sudo apt-get install -y nginx
 
 echo "Hello World!" | sudo tee /var/www/html/index.html
 
-string_for_replacement="server_name -; \nrewrite ^\\/redirect_me https://github.com/Elpluribusunum permanent;" 
+string_for_replacement="server_name -; \trewrite ^\\/redirect_me https://github.com/Elpluribusunum permanent;" 
 
 sudo sed -i "s/server_name _;/$string_for_replacement/" /etc/nginx/sites-enabled/default
 
