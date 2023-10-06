@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+# creating web-01 to have an http response header
+
+# updating packages
+sudo apt-get update -y
+sudo apt-get install -y nginx
+
+# creating an index.html page
+echo "Hello World!" | sudo tee /var/www/html/index.html
+
+# creating a redirection
+string_for_replacement="server_name -; \n\trewrite ^\/redirect_me https:\/\/github.com\/Elpluribusunum permanent;" 
+
+sudo sed -i "s/server_name _;/$string_for_replacement/" /etc/nginx/sites-enabled/default
+
+# creating custom error page
+
+echo "Ceci n'est pas une page" | sudo tee /var/www/html/404.html
+
+string_for_replace="listen 80 default_server;\n\terror_page 404 \/404.html;\n\tlocation = \/404.htmk {\n\troot \/var/www/html;\n\t\tinternal;\n\t}"
+
+sudo sed -i "s/listen 80 default_server;/$string_for_replacement/" /etc/nginx/sites-enabled/default
+
+#custom http response header
+
+sudo se -i "server_name _i/a add_header X-Served-By $HOSTNAME;" /etc/nginx/sites-enabled/default
+
+# test for errors
+sudo nginx -t
+
+# restart nginx
+sudo service nginx restart
