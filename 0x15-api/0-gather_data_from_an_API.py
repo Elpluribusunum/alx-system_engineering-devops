@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-Script that retrieves information about an employee's progress on their TODO list using this REST API and the employee's ID
+Script that retrieves information about an employee's progress on their
+TODO list using this REST API and the employee's ID
 """
 
 import json
